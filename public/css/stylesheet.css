@@ -1,0 +1,769 @@
+:root {
+    --primaryColor: #026670;
+    --secondaryColor: #D7E7E8;
+    --breakpoint-mn: 460px;
+}
+
+/*********** General ***********/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin: 0 0 200px 0; /* bottom = footer height */
+}
+
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+.justify-content-between {
+    max-width: 100%;
+    margin:0;
+}
+
+.row {
+    margin: 0;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: calc(100% - 16px);
+        padding: 0;
+    }
+}
+
+.main {
+    padding: 150px 0;
+}
+
+img {
+    border: 1px solid;
+}
+
+/************* Header *********/
+
+.header {
+    background-color: var(--primaryColor);
+}
+
+.headerKosik, .headerPrihlasenie, .headerMenu{
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    fill: currentColor;
+}
+
+#homePageTitle {
+    color: var(--secondaryColor);
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 32px;
+    padding-right: 0;
+}
+
+.btnHeader {
+    color: var(--secondaryColor);
+}
+
+.btnHeader:hover, .btnHeader:active, .btnHeader:focus, #homePageTitle:hover,
+#homePageTitle:active, #homePageTitle:focus {
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.searchBar {
+    margin: 10px 0;
+    padding-left: 10px;
+}
+
+.headerLupa{
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+}
+
+.btnUser, .btnKosik {
+    padding: 10px 8px;
+}
+
+ul {
+    color: var(--secondaryColor);
+}
+
+/************* Footer *********/
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 200px;
+    width: 100%;
+    background-color: var(--primaryColor);
+    padding: 1.5rem 0;
+    font-size: 16px;
+}
+
+.linkFooter, .linkFooter:link, .linkFooter:visited  {
+    color: var(--secondaryColor);
+}
+
+/************* Homepage ************/
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primaryColor);
+}
+
+.scrollbar {
+    text-align: center;
+    margin-bottom: 50px;
+    background-color: var(--secondaryColor);
+}
+
+.scrollbarLink , .scrollbarLink:link, .scrollbarLink:visited {
+    color: black;
+    font-weight: bold;
+}
+
+.homePageObrazok {
+    margin: 10px 0;
+}
+
+.homepageProdukt {
+    max-width: 200px;
+}
+
+.povodnaCena {
+    font-weight: normal;
+    text-decoration: line-through;
+    margin-right: 1ch;
+}
+
+.platnaCena {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.triBodky {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+/************* Login/Registracia/Profil *********/
+
+#btnPrihlasitSa,#btnRegistracia, #btnProfilUlozitZmeny, #btnNovyProdukt {
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-color: unset;
+}
+
+#btnPrihlasitSa:hover, #btnPrihlasitSa:active, #btnPrihlasitSa:focus,
+#btnProfilUlozitZmeny:focus, #btnProfilUlozitZmeny:hover, #btnProfilUlozitZmeny:active,
+#btnRegistracia:hover, #btnRegistracia:active, #btnRegistracia:focus,
+#btnNovyProdukt:hover, #btnNovyProdukt:active, #btnNovyProdukt:focus{
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+#prihlasenieRegistracia, .prihlaseniePrihlasenie {
+    color: var(--primaryColor);
+    text-align: center;
+    display: block;
+    margin-bottom: 24px;
+}
+
+#loginEmail, #loginPassword {
+    width: 100%;
+}
+
+#prihlasenieRegistracia {
+    padding-top: 10px;
+}
+
+#prihlasenieZabudnuteHeslo {
+    color: var(--primaryColor);
+}
+
+.prihlasenieErrorNadpis {
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+.prihlasenieError {
+    color: black;
+    font-size: 16px;
+}
+
+#okoOtvorene, #okoZatvorene {
+    width: 16px;
+    height: 16px;
+    max-width: 16px;
+    fill: currentColor;
+}
+
+.dropdown-menu {
+    background-color: var(--secondaryColor);
+}
+
+.dropdown-item {
+    color: var(--primaryColor);
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+.kosikCount {
+    padding: 5px;
+    font-size: 11px;
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+    vertical-align: top;
+    border-radius: 50%;
+    margin-left: -16px;
+    margin-top: -8px;
+}
+
+.btnKosik:hover .kosikCount {
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+/************* Filtre *********/
+
+#filterTitleMain {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    margin-bottom: 16px;
+    margin-top: -24px;
+    background-color: var(--secondaryColor);
+    color: var(--primaryColor);
+    border-radius: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+
+}
+
+.filterButton {
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-color: unset;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+.filterButton:hover, .filterButton:active, .filterButton:focus {
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+#filterTitleFilter {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.filterTitle {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.filterZobrazitViac {
+    font-weight: bold;
+}
+
+.filterCena {
+    margin-top: 4px;
+}
+
+.filtre {
+    background-color: var(--secondaryColor);
+    border-radius: 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.btnFiltre {
+    background-color: var(--secondaryColor);
+    width: 100%;
+}
+
+.filterIcon {
+    fill: currentColor;
+    width: 20px;
+    height: 20px;
+}
+
+/************* Produkty *********/
+
+.produkt {
+    background-color: var(--secondaryColor);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin: 8px 0;
+}
+
+.produktNazov, .produktCena {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.produktAutor {
+    font-size: 16px;
+}
+
+.produktDostupnost {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.produktKusov {
+    padding: unset;
+}
+
+.produktBTNDoKosika {
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-color: unset;
+    margin-top: 8px;
+    font-size: 16px;
+    min-width: 110px;
+}
+
+.produktBTNDoKosika:hover, .produktBTNDoKosika:active, .produktBTNDoKosika:focus {
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.produktBTNOdstranitProdukt {
+    color: var(--secondaryColor);
+    background-color: red;
+    border-color: unset;
+    margin-top: 8px;
+    font-size: 16px;
+    min-width: 110px;
+}
+
+.produktBTNOdstranitProdukt:hover, .produktBTNOdstranitProdukt:active, .produktBTNOdstranitProdukt:focus {
+    background: var(--secondaryColor);
+    color: red;
+}
+
+.produktBTNUpravitProdukt {
+    background-color: blueviolet;
+    color: var(--secondaryColor);
+    border-color: unset;
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 16px;
+    min-width: 110px;
+}
+
+.produktBTNUpravitProdukt:hover, .produktBTNUpravitProdukt:active, .produktBTNUpravitProdukt:focus {
+    background: var(--secondaryColor);
+    color: blueviolet;
+}
+
+.produktFilter{
+    color: var(--primaryColor);
+}
+
+.produktFilter:hover, .produktFilter:focus,
+.produktPaginationText:hover, .produktPaginationText:focus, .page-item.active .page-link {
+    color: var(--secondaryColor);
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primaryColor);
+}
+
+.produktObrazok {
+    max-width: 150px;
+}
+
+.produktPagination {
+    margin-top: 24px;
+}
+
+.produktPaginationText {
+    color: var(--primaryColor);
+}
+
+.produktLupa {
+    fill: currentColor;
+    width: 16px;
+    height: 16px;
+}
+
+.produktBTNLupa:hover, .produktBTNLupa:focus {
+    background-color: var(--primaryColor);
+}
+
+/*************** Detail produktu ***************/
+
+#detailCarousel {
+    width: 250px;
+}
+
+.detailNazovProduktu, .detailHodnotenie{
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+}
+
+.detailTriBodky {
+    width: 100ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.detailSeria {
+    font-size: 20px;
+    color: black;
+}
+
+.detailAutor {
+    font-size: 24px;
+    font-weight: normal;
+    color: black;
+}
+
+.detailCena {
+    font-size: 32px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 0;
+}
+
+.detailDostupnost {
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.detailMnozstvo {
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.inputMnozstvo, .inputMnozstvoDis {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    margin: 8px 8px 8px 0;
+}
+
+.inputMnozstvo::-webkit-inner-spin-button,
+.inputMnozstvo::-webkit-outer-spin-button {
+    opacity: 1;
+}
+
+#detailBTNDoKosika {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.detailText {
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    word-break: break-word;
+    text-align: justify;
+}
+
+.detailTextNone {
+    display: none;
+}
+
+.detailBoldText {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    word-break: break-word;
+}
+
+.detailPodnadpis {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+#detailZobrazitViac, #filtrovanieZobrazitViac {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+#detailZobrazitViac:hover, #filtrovanieZobrazitViac:hover {
+    text-decoration: underline;
+}
+
+.table {
+    margin: 20px 0;
+}
+
+/*************** Pokladna ***************/
+
+.btnPokladnaVyhodit {
+    background: var(--secondaryColor);
+    color: darkred;
+    padding: 0;
+}
+
+.btnPokladnaVyhodit:focus, .btnPokladnaVyhodit:hover {
+    background: darkred;
+    color: var(--secondaryColor);
+}
+
+.pokladnaX {
+    fill: currentColor;
+    width: 40px;
+    height: 40px;
+    max-width: 40px;
+}
+
+.btnMnozstvo {
+    font-size: 24px;
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.btnMnozstvo:hover, .btnMnozstvo:focus {
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+.pokladnaMnozstvo {
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    padding: 8px 16px;
+    margin: 8px 0;
+}
+
+#btnPokladnaPokracovat {
+    margin: 16px 16px 0 0;
+    font-size: 24px;
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+
+#btnPokladnaSpat {
+    margin: 16px 0 0 16px;
+    font-size: 24px;
+    background: var(--secondaryColor);
+    color: var(--primaryColor);
+}
+
+.pokladnaCena {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.pokladnaCelkovaCena {
+    margin: 32px 15px 32px 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.pokladnaZvolteSposobDopravy, .pokladnaZvolteSposobPLatby {
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.pokladnaFormular, .profil, .novyProdukt {
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+
+.pokladnaDoprava, .pokladnaPlatba, .pokladnaAdresa, .pokladnaKontakt {
+    margin: 16px 0;
+    font-weight: bold;
+}
+
+.pokladnaObrazok {
+    max-width: 150px;
+}
+
+.pokladnaSposob {
+    font-weight: normal;
+}
+
+.pokladnaPodmienky {
+    margin: 16px;
+    font-size: 16px;
+}
+
+.pokladnaTextGroup {
+    margin: 16px 0;
+}
+
+.pokladnaToHomepage {
+    margin-top: 100px;
+}
+
+/******* Admin **********/
+
+.pridatObrazok {
+    margin-bottom: 32px;
+}
+
+.textArea {
+    width: 100%;
+    height: 400px;
+}
+
+.novyProduktDlzka {
+    display: none;
+}
+
+.novyProduktNumber::-webkit-inner-spin-button,
+.novyProduktNumber::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.poleRequired {
+    color: red;
+    margin-left: 8px;
+}
+
+.btnEditObrazok {
+    font-size: 16px;
+    background: red;
+    color: lavenderblush;
+    border-color: unset;
+}
+
+.btnEditObrazok:hover, .btnEditObrazok:focus {
+    background: lavenderblush;
+    color: red;
+}
+
+#zoznamObrazkovOld {
+    margin-bottom: 24px;
+}
+
+/******* Screen size ********/
+@media (min-width: 454px) {
+
+    .d-mn-none {
+        display: none !important;
+    }
+
+    .d-mn-block {
+        display: block !important;
+    }
+
+    .d-mn-flex {
+        display: flex !important;
+    }
+}
+
+@media (max-width: 400px) {
+    footer {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .btnHeader {
+        padding: 6px 8px;
+    }
+
+    .headerKosik, .headerPrihlasenie, .headerMenu{
+        width: 25px;
+        height: 25px;
+        max-width: 25px;
+    }
+
+    #homePageTitle {
+        font-size: 24px;
+        letter-spacing: 1px;
+        padding-right: 8px;
+    }
+
+    .pokladnaObrazok {
+        max-width: 75px;
+    }
+
+    .produktObrazok {
+        max-width: 100px;
+    }
+
+    .pokladnaCelkovaCena {
+        font-size: 20px;
+    }
+
+    .produktNazov, .produktCena, #btnPokladnaPokracovat, #btnPokladnaSpat,
+    .pokladnaZvolteSposobDopravy, .pokladnaZvolteSposobPLatby, .pokladnaFormular, .profil, .novyProdukt,
+    .btnMnozstvo{
+        font-size: 16px;
+    }
+
+    .pokladnaMnozstvo, .btnMnozstvo {
+        padding: 6px;
+    }
+
+    .produktAutor, .produktDostupnost, .produktBTNDoKosika, .detailMnozstvo, .pokladnaCena,
+    .pokladnaPodmienky, .pokladnaMnozstvo {
+        font-size: 14px;
+    }
+
+    #filterTitleMain {
+        font-size: 24px;
+    }
+
+    .pokladnaX {
+        width: 20px;
+        height: 20px;
+        max-width: 20px;
+    }
+}
+
+@media (max-width: 700px) {
+    .detailNazovProduktu, .detailCena {
+        font-size: 20px;
+    }
+
+    .detailAutor {
+        font-size: 18px;
+    }
+
+    .detailSeria, .detailDostupnost, .detailMnozstvo, #detailStav, .inputMnozstvo, .inputMnozstvoDis,
+    #detailBTNDoKosika {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .filterSearch {
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+
+@media (max-width: 454px) {
+    .detailMnozstvo, .inputMnozstvo, #detailBTNDoKosika {
+        font-size: 20px;
+    }
+}
